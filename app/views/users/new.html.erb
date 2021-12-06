@@ -1,0 +1,36 @@
+<div class="py-4 border rounded border-4">
+    <div class="mb-4 text-center">
+      <h1>アカウント登録</h1>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <%= form_with(model: @user) do |f| %>
+          <div class="mb-3">
+            <%= f.label :name, 'ユーザー名' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+    
+          <div class="mb-3">
+            <%= f.label :email, 'メールアドレス' %>
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+    
+          <div class="mb-3">
+            <%= f.label :password, 'パスワード' %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+    
+          <div class="mb-3">
+            <%= f.label :password_confirmation, 'パスワード（確認）' %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+          <%= f.submit 'アカウント登録', class: 'btn btn-primary w-100' %>
+        <% end %>
+      </div>
+    </div>
+</div>    
+
+<div class="my-3 border rounded border-4">
+    <p class="my-2 text-center">アカウントをお持ちですか？ ログインする</p>
+</div>    
