@@ -5,16 +5,13 @@
         <div class="rounded-circle">
           <%= image_tag user.image.url, class: 'rounded-circle mt-3', id: 'preview', size: '64x64' %>
         </div>
-        <div class="m-3">
-          <%= user.name %>
+        <div class="p-4">
+          <%= link_to user.name, user_path(user), class: "text-decoration-none" %>
         </div>  
         <div class="m-3">  
-          <p>フォローボタン</p>
+          <%= render 'relationships/follow_button', user: user %>
         </div>
       </li>
     <% end %>
   </ul>
-  <div class="d-flex justify-content-center">
-    <%== pagy_bootstrap_nav(@pagy) %>
-  </div>
 <% end %>

@@ -1,7 +1,4 @@
 class ApplicationController < ActionController::Base
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :image]) 
-  end
   
   include SessionsHelper
   include Pagy::Backend
@@ -12,5 +9,11 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       redirect_to login_url
     end
+  end
+  
+  def counts(user)
+    @count_posts = user.posts.count
+    @count_followings = user.followings.count
+    @count_followers = user.followers.count
   end
 end
