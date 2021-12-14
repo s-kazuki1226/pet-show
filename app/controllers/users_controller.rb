@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show, :followings, :followers]
+  before_action :require_user_logged_in, only: [:index, :show, :followings, :followers, :likes]
+  before_action :correct_user, only: [:edit, :update]
   
   def index
     @users = User.where.not(id: current_user.id).order(id: :desc)
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.order(id: :desc)
     counts(@user)
+    
   end
 
   def new
@@ -56,9 +58,20 @@ class UsersController < ApplicationController
     counts(@user)
   end
   
+  def likes
+    @user = User.find(params[:id])
+    @likes = @user.likes
+    counts(@user)
+  end  
+  
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :image )
+  end
+  
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to root_url unless @user == current_user
   end
 end

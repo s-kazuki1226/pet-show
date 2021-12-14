@@ -49,7 +49,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: pet_show_production
   username: pet_show
   password: <%= ENV['PET_SHOW_DATABASE_PASSWORD'] %>

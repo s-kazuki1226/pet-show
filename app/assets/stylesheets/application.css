@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
