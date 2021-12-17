@@ -1,14 +1,13 @@
 <div class="pt-3 border rounded border-4 border-primary">
   <%= form_for(@user) do |f| %>
   
-    <div class="mt-1 mb-3 text-center">
-      <%= image_tag @user.image.url, class: 'rounded-circle mt-3', id: 'preview', size: '150x150' %>
+    <div class="mt-1 text-center">
+      <%= image_tag @user.image.url, class: 'rounded-circle mt-3', size: '150x150', alt: "" %>
+      <%= f.label :image, "変更", class: "image_input_btn" %>
+      <%= f.file_field :image, class: "image_form" %>  
     </div>  
-    <div class="text-center">
-      <button type="button" class="btn btn-outline-secondary rounded-pill ">  
-        <%= f.file_field :image %>
-      </button>
-    </diiv>
+    
+     
     
     <div class="row"> 
       <div class="col-sm-6 offset-sm-3">

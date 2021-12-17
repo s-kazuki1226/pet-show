@@ -4,12 +4,12 @@
       <li class="mb-3 d-flex ">
         <div>
           <div class="rounded-circle">
-            <%= image_tag @post.user.image.url, class: 'rounded-circle ', id: 'preview', size: '64x64' %>
+            <%= image_tag @post.user.image.url, class: 'rounded-circle ', size: '64x64', alt: "" %>
             <span class="m-3"><%= link_to @post.user.name, user_path(@post.user), class: "text-decoration-none" %></span>
           </div>
             <div class="mt-2" style="width: 750px;overflow-wrap: break-word;"><%= simple_format(@post.comment) %></div>
           <%= link_to(post_path(@post)) do %>
-            <%= image_tag @post.image.url%>
+            <%= image_tag @post.image.url, alt: ""%>
           <% end %>
           <div class="text-secondary row">
             <div class="mt-1 col-4">

@@ -1,6 +1,6 @@
 <% if current_user.likes?(post) %>
   <%= form_with(model: current_user.favorites.find_by(post_id: post.id), method: :delete) do |f| %>
-    <%= hidden_field_tag :post_id, post.id %>
+    <%= hidden_field_tag :post_id, post.id, id: "post_#{post.id}" %>
     <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
       <i class="fas fa-heart unlike-btn"></i>
       <%= Favorite.where(post_id: post.id).length %>
@@ -8,7 +8,7 @@
   <% end %>
 <% else %>
   <%= form_with(model: current_user.favorites.build) do |f| %>
-    <%= hidden_field_tag :post_id, post.id %>
+    <%= hidden_field_tag :post_id, post.id, id: "post_#{post.id}" %>
     <%= button_tag :type => "submit", :class =>"btn btn-default btn-s-md" do %>
       <i class="far fa-heart like-btn"></i>
       <%= Favorite.where(post_id: post.id).length %> 
