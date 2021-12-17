@@ -7,15 +7,15 @@
             <%= image_tag @post.user.image.url, class: 'rounded-circle ', size: '64x64', alt: "" %>
             <span class="m-3"><%= link_to @post.user.name, user_path(@post.user), class: "text-decoration-none" %></span>
           </div>
-            <div class="mt-2" style="width: 750px;overflow-wrap: break-word;"><%= simple_format(@post.comment) %></div>
+          <div class="mt-2" style="width: 750px;overflow-wrap: break-word;"><%= simple_format(@post.comment) %></div>
           <%= link_to(post_path(@post)) do %>
             <%= image_tag @post.image.url, alt: ""%>
           <% end %>
           <div class="text-secondary row">
-            <div class="mt-1 col-4">
+            <div class="mt-1 col-3">
               投稿日 <%= @post.created_at.strftime('%Y/%m/%d') %>
             </div>   
-            <div class="col-4">  
+            <div class="col-3">  
               <%= render 'favorites/favorite_button', post: @post %>
             </div>   
             <div class="mt-1 col-3">
