@@ -1,9 +1,8 @@
 <div class="pt-3 border rounded border-4 border-primary">
   <%= form_for(@user) do |f| %>
+  
     <div class="mt-1 mb-3 text-center">
- 
-        <%= image_tag @user.image.url, class: 'rounded-circle mt-3', id: 'preview', size: '150x150' %>
-      
+      <%= image_tag @user.image.url, class: 'rounded-circle mt-3', id: 'preview', size: '150x150' %>
     </div>  
     <div class="text-center">
       <button type="button" class="btn btn-outline-secondary rounded-pill ">  
@@ -11,9 +10,10 @@
       </button>
     </diiv>
     
-    <div class="row">
+    <div class="row"> 
       <div class="col-sm-6 offset-sm-3">
         <div class="mt-5 mb-3">
+        <%= render 'layouts/error_messages', model: f.object %>  
           <%= f.label :name, 'ユーザー名' %>
           <%= f.text_field :name, class: 'form-control' %>
         </div>

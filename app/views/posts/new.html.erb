@@ -6,16 +6,17 @@
   <%= form_for (@post) do |f| %>
     <div class="row">
       <aside class="col-sm-10 offset-sm-1">
+        <%= render 'layouts/error_messages', model: f.object %>
         <%= f.label :comment, 'コメント' %>
         <div class="mb-3">
-          <%= f.text_area :comment, class: 'form-control', rows: 5 %>
+          <%= f.text_area :comment, class: 'form-control', rows: 4 %>
         </div>
         
         <div>
           <%= f.label :image, "写真" %>
         </div>
         <div class="mb-3">
-          <%= f.file_field :image, class: "image" %>
+          <%= f.file_field :image, class: "image"%>
         </div>  
           
         <div class="col-sm-1 offset-sm-11">

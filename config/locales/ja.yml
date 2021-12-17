@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        comment: コメント
+        image: 写真 
+      user:
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
