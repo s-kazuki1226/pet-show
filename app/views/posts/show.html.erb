@@ -3,8 +3,8 @@
     <ul class="list-unstyled mt-2">
       <li class="mb-3 d-flex ">
         <div>
-          <div class="rounded-circle">
-            <%= image_tag @post.user.image.url, class: 'rounded-circle ', size: '64x64', alt: "" %>
+          <div>
+            <%= image_tag @post.user.image.url, class: 'user_image',  alt: "" %>
             <span class="m-3"><%= link_to @post.user.name, user_path(@post.user), class: "text-decoration-none" %></span>
           </div>
           <div class="mt-2" style="width: 750px;overflow-wrap: break-word;"><%= simple_format(@post.comment) %></div>

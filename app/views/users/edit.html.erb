@@ -2,7 +2,7 @@
   <%= form_for(@user) do |f| %>
   
     <div class="mt-1 text-center">
-      <%= image_tag @user.image.url, class: 'rounded-circle mt-3', size: '150x150', alt: "" %>
+      <%= image_tag @user.image.url, class: 'user_img mt-3', alt: "" %>
       <%= f.label :image, "変更", class: "image_input_btn" %>
       <%= f.file_field :image, class: "image_form" %>  
     </div>  
