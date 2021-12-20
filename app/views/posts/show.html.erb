@@ -17,11 +17,12 @@
             </div>   
             <div class="col-3">  
               <%= render 'favorites/favorite_button', post: @post %>
-            </div>   
+            </div>
             <div class="mt-1 col-3">
               <% if current_user == @post.user %><%= link_to "削除", @post, method: :delete, data: { confirm: "本当にこの投稿を削除してよろしいですか？" }, class: 'btn btn-danger btn-sm rounded-circle p-0' %><% end %>
             </div>  
           </div>
+          <%= render 'comments/comments', @posts: post %>
         </div>
       </li>
     </ul>

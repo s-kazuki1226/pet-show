@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :likes, through: :favorites, source: :post
   
+  has_many :comments, dependent: :destroy
+  
   def follow(other_user)
     unless self == other_user
       self.relationships.find_or_create_by(follow_id: other_user.id)
@@ -49,3 +51,4 @@ class User < ApplicationRecord
     self.likes.include?(post)
   end
 end
+

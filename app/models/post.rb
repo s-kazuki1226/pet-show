@@ -10,5 +10,7 @@ class Post < ApplicationRecord
   has_many :reverses_of_favorite, class_name: 'Favorite', foreign_key: 'post_id'
   has_many :likers, through: :reverses_of_favorite, source: :user
   
+  has_many :comments, dependent: :destroy
+  
   
 end
