@@ -1,8 +1,20 @@
 .img{
-    background-image:url(assets/犬猫.jpg); 
-    background-repeat:  no-repeat;                                  
-    background-position: center center;                    
-    width:auto;                                           
-    height:450pX;                                          
+  background-image:url(assets/犬猫.jpg); 
+  background-repeat:  no-repeat;                                  
+  background-position: center center;                    
+  width:auto;                                           
+  height:450pX;                                          
 }
 
+h1{
+  color: #001858;
+}
+
+h6{
+  color: #172c66;
+}
+
+.btn-lg{
+  color: #001858;
+  background-color: #f582ae;
+}

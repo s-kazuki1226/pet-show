@@ -17,4 +17,30 @@ header{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  background-color: #f3d2c1;
+}
+
+body{
+  background-color: #fef6e4;
+}
+
+.nav-link{
+  color: #001858;
+}
+
+.nav-link:hover{
+  color: #001858;
+}
+
+.navbar-brand {
+  color: #fef6e4;
+}
+
+.navbar-brand:hover{
+  color: #fef6e4;
+}
+
+.dropdown-toggle{
+  color: #001858;
+  background-color: #8bd3dd;
 }
