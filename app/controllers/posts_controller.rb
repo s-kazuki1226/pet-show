@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    #byebug
+    
     if @post.save
       flash[:success] = '写真を投稿しました。'
       redirect_to root_url
@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    #byebug
     @post.destroy
     flash[:success] = '投稿を削除しました。'
     redirect_to root_url
