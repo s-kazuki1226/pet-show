@@ -17,30 +17,47 @@ header{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: #f3d2c1;
+  background-color: #716e77;
 }
 
 body{
-  background-color: #fef6e4;
+  background-color: white;
 }
 
 .nav-link{
-  color: #001858;
+  color: white;
 }
 
 .nav-link:hover{
-  color: #001858;
+  color: white;
 }
 
 .navbar-brand {
-  color: #fef6e4;
+  color: white;
 }
 
-.navbar-brand:hover{
-  color: #fef6e4;
+.navbar-brand:hover {
+  color: white;
 }
 
-.dropdown-toggle{
-  color: #001858;
-  background-color: #8bd3dd;
+.dropdown-toggle{ 
+  color: white;
+  background-color: #716e77;
 }
+
+.dropdown-toggle:hover{
+  color: #a39391;
+}
+
+.dropdown-menu .nav-link {
+  color: #716e77;
+}
+
+.border {
+  border: 4px solid #ecd6c7!important;
+}
+
+.nav-tabs .nav-link {
+  color: #716e77;
+}
+

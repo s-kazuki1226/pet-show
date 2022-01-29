@@ -1,18 +1,14 @@
 <% if logged_in? %>
   <%= render 'posts/posts', posts: @posts %>
 <% else %>
-　<div class="pt-5 pb-4 my-4 border rounded border-4 border-info">
+　<div class="pt-5 pb-4 my-4 border rounded">
     <div class="text-center">
       <h1>みんなにペットを紹介しよう！</h1>
-      <div class="mt-4">
+      <div class="mt-4 pb-2">
         <%= link_to 'アカウント登録はこちら', signup_path, class: 'btn btn-lg' %>
-      </div>  
-    </div>
-  </div>
-  <div class="p-2 my-3 border rounded border-4 border-info">
-    <div class="text-center">
+      </div>
       <h6 class="my-2 text-center">アカウントをお持ちですか？ <%= link_to 'ログインする', login_path %></h6>
-    </div> 
+    </div>
   </div>
   <div class="img" alt=""></div>
 <% end %>
