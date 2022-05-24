@@ -4,3 +4,8 @@
     height: 64px;
     object-fit: cover;
 }
+
+.card{
+    background-color: #ceefe4;
+    padding: 40px;
+}
