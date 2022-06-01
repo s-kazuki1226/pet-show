@@ -9,3 +9,12 @@
     background-color: #ceefe4;
     padding: 40px;
 }
+
+.photo{
+    max-width: 100%;
+	height: auto;
+}
+
+.post-new-btn{
+    text-align: right;
+}

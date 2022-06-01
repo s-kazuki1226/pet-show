@@ -1,15 +1,15 @@
 <div class="row">
   <div class="col-sm-8 offset-sm-2">
     <ul class="list-unstyled mt-2">
-      <li class="mb-3 d-flex card">
+      <li class="d-flex card">
         <div>
           <div>
             <%= image_tag @post.user.image.url, class: 'user_image',  alt: "" %>
             <span class="m-3"><%= link_to @post.user.name, user_path(@post.user), class: "text-decoration-none" %></span>
           </div>
-          <div class="mt-2" style="width: 750px;overflow-wrap: break-word;"><%= simple_format(@post.comment) %></div>
+          <div class="mt-2" style="overflow-wrap: break-word;"><%= simple_format(@post.comment) %></div>
           <div class="text-center mb-3">
-              <%= image_tag @post.image.url, alt: ""%>
+              <%= image_tag @post.image.url, alt: "", class: "photo"%>
           </div>  
           <div class="text-secondary row">
             <div class="mt-1 col-3">

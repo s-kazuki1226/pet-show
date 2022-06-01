@@ -1,0 +1,15 @@
+current directory: /home/ubuntu/environment/pet-show/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+/home/ubuntu/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/ubuntu/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20220601-6259-h408jk.rb extconf.rb
+creating Makefile
+
+current directory: /home/ubuntu/environment/pet-show/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/environment/pet-show/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/ubuntu/environment/pet-show/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20220601-6259-y4ztbb/bootsnap

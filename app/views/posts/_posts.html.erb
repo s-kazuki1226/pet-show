@@ -2,7 +2,7 @@
   <div class="col-sm-8 offset-sm-2">
     <ul class="list-unstyled mt-2">
       <% posts.each do |post| %>
-        <li class="mb-5 d-flex card">
+        <li class="mb-4 d-flex card">
           <div>
             <div>
               <%= image_tag post.user.image.url, class: 'user_image', alt: "" %>
@@ -11,7 +11,7 @@
             <div class="mt-2" style="overflow-wrap: break-word;"><%= simple_format(post.comment) %></div>
             <div class="text-center mb-3">
               <%= link_to(post_path(post)) do %>
-                <%= image_tag post.image.url , alt: ""%>
+                <%= image_tag post.image.url , alt: "", class: "photo"%>
               <% end %>
             </div>
             <div class="text-secondary row">
