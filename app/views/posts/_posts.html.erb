@@ -22,7 +22,7 @@
                 <%= render 'favorites/favorite_button', post: post %>
               </div>   
               <div class="mt-1 col-3">
-                <% if current_user == post.user %><%= link_to "投稿を削除する", post, method: :delete, data: { confirm: "本当にこの投稿を削除してよろしいですか？" }, class: 'btn text-secondary btn-sm rounded-circle p-0' %><% end %>
+                <% if current_user == post.user %><%= link_to "投稿を削除する", post, method: :delete, data: { confirm: "本当にこの投稿を削除してよろしいですか？" }, class: 'btn text-secondary btn-sm p-0' %><% end %>
               </div>  
             </div>
           </div>
@@ -31,3 +31,6 @@
     </ul>
   </div>
 </div>
+
+
+
